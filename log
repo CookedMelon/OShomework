@@ -1,0 +1,625 @@
+int pid_list[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+int time_need[] = {8, 6, 17, 3, 4, 5, 9, 10, 11, 12};
+int come_time[] = {0, 5,  13, 20, 21, 25, 30, 32,40,50};
+------------------------------------------------------------------------------------------
+now time:0
+all Queue is empty!
+next process info:
+pid:0, level:0, is_active:0, time_left:0, time_left_in_level:0, come_time:0, needed_time:0
+No process in queue!
+Process 0 come
+Queue 0: 0 
+Queue 1: 
+Queue 2: 
+Queue 3: 
+
+------------------------------------------------------------------------------------------
+now time:0
+next process info:
+pid:0, level:0, is_active:1, time_left:8, time_left_in_level:0, come_time:0, needed_time:8
+time_left:1, time_com:5
+Process 0 run 1 time slices
+pid:0, level:1, is_active:1, time_left:7, time_left_in_level:0, come_time:0, needed_time:8
+Queue 0: 
+Queue 1: 0 
+Queue 2: 
+Queue 3: 
+
+------------------------------------------------------------------------------------------
+now time:1
+next process info:
+pid:0, level:1, is_active:1, time_left:7, time_left_in_level:0, come_time:0, needed_time:8
+time_left:2, time_com:4
+Process 0 run 2 time slices
+pid:0, level:2, is_active:1, time_left:5, time_left_in_level:0, come_time:0, needed_time:8
+Queue 0: 
+Queue 1: 
+Queue 2: 0 
+Queue 3: 
+
+------------------------------------------------------------------------------------------
+now time:3
+next process info:
+pid:0, level:2, is_active:1, time_left:5, time_left_in_level:0, come_time:0, needed_time:8
+time_left:4, time_com:2
+Process 0 run 2 time slices
+Process 1 come
+pid:0, level:3, is_active:1, time_left:3, time_left_in_level:2, come_time:0, needed_time:8
+Queue 0: 1 
+Queue 1: 
+Queue 2: 
+Queue 3: 0 
+
+------------------------------------------------------------------------------------------
+now time:5
+next process info:
+pid:1, level:0, is_active:1, time_left:6, time_left_in_level:0, come_time:5, needed_time:6
+time_left:1, time_com:8
+Process 1 run 1 time slices
+pid:1, level:1, is_active:1, time_left:5, time_left_in_level:0, come_time:5, needed_time:6
+Queue 0: 
+Queue 1: 1 
+Queue 2: 
+Queue 3: 0
+
+------------------------------------------------------------------------------------------
+now time:6
+next process info:
+pid:1, level:1, is_active:1, time_left:5, time_left_in_level:0, come_time:5, needed_time:6
+time_left:2, time_com:7
+Process 1 run 2 time slices
+pid:1, level:2, is_active:1, time_left:3, time_left_in_level:0, come_time:5, needed_time:6
+Queue 0:
+Queue 1:
+Queue 2: 1
+Queue 3: 0
+
+------------------------------------------------------------------------------------------
+now time:8
+next process info:
+pid:1, level:2, is_active:1, time_left:3, time_left_in_level:0, come_time:5, needed_time:6
+time_left:3, time_com:5
+Process 1 run 3 time slices
+Process 1 finished
+pid:1, level:2, is_active:0, time_left:0, time_left_in_level:1, come_time:5, needed_time:6
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3: 0
+
+------------------------------------------------------------------------------------------
+now time:11
+next process info:
+pid:0, level:3, is_active:1, time_left:3, time_left_in_level:2, come_time:0, needed_time:8
+time_left:2, time_com:2
+Process 0 run 2 time slices
+pid:0, level:3, is_active:1, time_left:1, time_left_in_level:0, come_time:0, needed_time:8
+Process 2 come
+Queue 0: 2
+Queue 1:
+Queue 2:
+Queue 3: 0
+^C
+(base) /mnt/d/Workspace/大学学习/计操/实验1 ⌚ 11:36:36 $
+(base) /mnt/d/Workspace/大学学习/计操/实验1 ⌚ 11:36:36 $
+(base) /mnt/d/Workspace/大学学习/计操/实验1 ⌚ 11:36:36 $
+(base) /mnt/d/Workspace/大学学习/计操/实验1 ⌚ 11:36:49 $
+(base) /mnt/d/Workspace/大学学习/计操/实验1 ⌚ 11:36:52 $ gcc ./task.c -o task
+(base) /mnt/d/Workspace/大学学习/计操/实验1 ⌚ 11:36:53 $ ./task
+------------------------------------------------------------------------------------------
+now time:0
+all Queue is empty!
+next process info:
+pid:0, level:0, is_active:0, time_left:0, time_left_in_level:0, come_time:0, needed_time:0
+No process in queue!
+Process 0 come
+Queue 0: 0
+Queue 1:
+Queue 2:
+Queue 3:
+
+------------------------------------------------------------------------------------------
+now time:0
+next process info:
+pid:0, level:0, is_active:1, time_left:8, time_left_in_level:0, come_time:0, needed_time:8
+time_left:1, next_come_time:5
+Process 0 run 1 time slices
+pid:0, level:1, is_active:1, time_left:7, time_left_in_level:0, come_time:0, needed_time:8
+Queue 0:
+Queue 1: 0
+Queue 2:
+Queue 3:
+
+------------------------------------------------------------------------------------------
+now time:1
+next process info:
+pid:0, level:1, is_active:1, time_left:7, time_left_in_level:0, come_time:0, needed_time:8
+time_left:2, next_come_time:4
+Process 0 run 2 time slices
+pid:0, level:2, is_active:1, time_left:5, time_left_in_level:0, come_time:0, needed_time:8
+Queue 0:
+Queue 1:
+Queue 2: 0
+Queue 3:
+
+------------------------------------------------------------------------------------------
+now time:3
+next process info:
+pid:0, level:2, is_active:1, time_left:5, time_left_in_level:0, come_time:0, needed_time:8
+time_left:4, next_come_time:2
+Process 0 run 2 time slices
+Process 1 come
+pid:0, level:3, is_active:1, time_left:3, time_left_in_level:2, come_time:0, needed_time:8
+Queue 0: 1
+Queue 1:
+Queue 2:
+Queue 3: 0
+
+------------------------------------------------------------------------------------------
+now time:5
+next process info:
+pid:1, level:0, is_active:1, time_left:6, time_left_in_level:0, come_time:5, needed_time:6
+time_left:1, next_come_time:8
+Process 1 run 1 time slices
+pid:1, level:1, is_active:1, time_left:5, time_left_in_level:0, come_time:5, needed_time:6
+Queue 0:
+Queue 1: 1
+Queue 2:
+Queue 3: 0
+
+------------------------------------------------------------------------------------------
+now time:6
+next process info:
+pid:1, level:1, is_active:1, time_left:5, time_left_in_level:0, come_time:5, needed_time:6
+time_left:2, next_come_time:7
+Process 1 run 2 time slices
+pid:1, level:2, is_active:1, time_left:3, time_left_in_level:0, come_time:5, needed_time:6
+Queue 0:
+Queue 1:
+Queue 2: 1
+Queue 3: 0
+
+------------------------------------------------------------------------------------------
+now time:8
+next process info:
+pid:1, level:2, is_active:1, time_left:3, time_left_in_level:0, come_time:5, needed_time:6
+time_left:3, next_come_time:5
+Process 1 run 3 time slices
+Process 1 finished
+pid:1, level:2, is_active:0, time_left:0, time_left_in_level:1, come_time:5, needed_time:6
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3: 0
+
+------------------------------------------------------------------------------------------
+now time:11
+next process info:
+pid:0, level:3, is_active:1, time_left:3, time_left_in_level:2, come_time:0, needed_time:8
+time_left:2, next_come_time:2
+Process 0 run 2 time slices
+pid:0, level:3, is_active:1, time_left:1, time_left_in_level:0, come_time:0, needed_time:8
+Process 2 come
+Queue 0: 2
+Queue 1:
+Queue 2:
+Queue 3: 0
+
+------------------------------------------------------------------------------------------
+now time:13
+next process info:
+pid:2, level:0, is_active:1, time_left:17, time_left_in_level:0, come_time:13, needed_time:17
+time_left:1, next_come_time:7
+Process 2 run 1 time slices
+pid:2, level:1, is_active:1, time_left:16, time_left_in_level:0, come_time:13, needed_time:17
+Queue 0:
+Queue 1: 2
+Queue 2:
+Queue 3: 0
+
+------------------------------------------------------------------------------------------
+now time:14
+next process info:
+pid:2, level:1, is_active:1, time_left:16, time_left_in_level:0, come_time:13, needed_time:17
+time_left:2, next_come_time:6
+Process 2 run 2 time slices
+pid:2, level:2, is_active:1, time_left:14, time_left_in_level:0, come_time:13, needed_time:17
+Queue 0:
+Queue 1:
+Queue 2: 2
+Queue 3: 0
+
+------------------------------------------------------------------------------------------
+now time:16
+next process info:
+pid:2, level:2, is_active:1, time_left:14, time_left_in_level:0, come_time:13, needed_time:17
+time_left:4, next_come_time:4
+Process 2 run 4 time slices
+pid:2, level:3, is_active:1, time_left:10, time_left_in_level:0, come_time:13, needed_time:17
+Process 3 come
+Queue 0: 3
+Queue 1:
+Queue 2:
+Queue 3: 0 2
+
+------------------------------------------------------------------------------------------
+now time:20
+next process info:
+pid:3, level:0, is_active:1, time_left:3, time_left_in_level:0, come_time:20, needed_time:3
+time_left:1, next_come_time:1
+Process 3 run 1 time slices
+pid:3, level:1, is_active:1, time_left:2, time_left_in_level:0, come_time:20, needed_time:3
+Process 4 come
+Queue 0: 4
+Queue 1: 3
+Queue 2:
+Queue 3: 0 2
+
+------------------------------------------------------------------------------------------
+now time:21
+next process info:
+pid:4, level:0, is_active:1, time_left:4, time_left_in_level:0, come_time:21, needed_time:4
+time_left:1, next_come_time:4
+Process 4 run 1 time slices
+pid:4, level:1, is_active:1, time_left:3, time_left_in_level:0, come_time:21, needed_time:4
+Queue 0:
+Queue 1: 3 4
+Queue 2:
+Queue 3: 0 2
+
+------------------------------------------------------------------------------------------
+now time:22
+next process info:
+pid:3, level:1, is_active:1, time_left:2, time_left_in_level:0, come_time:20, needed_time:3
+time_left:2, next_come_time:3
+Process 3 run 2 time slices
+Process 3 finished
+pid:3, level:1, is_active:0, time_left:0, time_left_in_level:0, come_time:20, needed_time:3
+Queue 0:
+Queue 1: 4
+Queue 2:
+Queue 3: 0 2
+
+------------------------------------------------------------------------------------------
+now time:24
+next process info:
+pid:4, level:1, is_active:1, time_left:3, time_left_in_level:0, come_time:21, needed_time:4
+time_left:2, next_come_time:1
+Process 4 run 1 time slices
+Process 5 come
+pid:4, level:2, is_active:1, time_left:2, time_left_in_level:1, come_time:21, needed_time:4
+Queue 0: 5
+Queue 1:
+Queue 2: 4
+Queue 3: 0 2
+
+------------------------------------------------------------------------------------------
+now time:25
+next process info:
+pid:5, level:0, is_active:1, time_left:5, time_left_in_level:0, come_time:25, needed_time:5
+time_left:1, next_come_time:5
+Process 5 run 1 time slices
+pid:5, level:1, is_active:1, time_left:4, time_left_in_level:0, come_time:25, needed_time:5
+Queue 0:
+Queue 1: 5
+Queue 2: 4
+Queue 3: 0 2
+
+------------------------------------------------------------------------------------------
+now time:26
+next process info:
+pid:5, level:1, is_active:1, time_left:4, time_left_in_level:0, come_time:25, needed_time:5
+time_left:2, next_come_time:4
+Process 5 run 2 time slices
+pid:5, level:2, is_active:1, time_left:2, time_left_in_level:0, come_time:25, needed_time:5
+Queue 0:
+Queue 1:
+Queue 2: 4 5
+Queue 3: 0 2
+
+------------------------------------------------------------------------------------------
+now time:28
+next process info:
+pid:4, level:2, is_active:1, time_left:2, time_left_in_level:1, come_time:21, needed_time:4
+time_left:1, next_come_time:2
+Process 4 run 1 time slices
+pid:4, level:3, is_active:1, time_left:1, time_left_in_level:0, come_time:21, needed_time:4
+Queue 0:
+Queue 1:
+Queue 2: 5
+Queue 3: 0 2 4
+
+------------------------------------------------------------------------------------------
+now time:29
+next process info:
+pid:5, level:2, is_active:1, time_left:2, time_left_in_level:0, come_time:25, needed_time:5
+time_left:2, next_come_time:1
+Process 5 run 1 time slices
+Process 6 come
+pid:5, level:3, is_active:1, time_left:1, time_left_in_level:3, come_time:25, needed_time:5
+Queue 0: 6
+Queue 1:
+Queue 2:
+Queue 3: 0 2 4 5
+
+------------------------------------------------------------------------------------------
+now time:30
+next process info:
+pid:6, level:0, is_active:1, time_left:9, time_left_in_level:0, come_time:30, needed_time:9
+time_left:1, next_come_time:2
+Process 6 run 1 time slices
+pid:6, level:1, is_active:1, time_left:8, time_left_in_level:0, come_time:30, needed_time:9
+Queue 0:
+Queue 1: 6
+Queue 2:
+Queue 3: 0 2 4 5
+
+------------------------------------------------------------------------------------------
+now time:31
+next process info:
+pid:6, level:1, is_active:1, time_left:8, time_left_in_level:0, come_time:30, needed_time:9
+time_left:2, next_come_time:1
+Process 6 run 1 time slices
+Process 7 come
+pid:6, level:2, is_active:1, time_left:7, time_left_in_level:1, come_time:30, needed_time:9
+Queue 0: 7
+Queue 1:
+Queue 2: 6
+Queue 3: 0 2 4 5
+
+------------------------------------------------------------------------------------------
+now time:32
+next process info:
+pid:7, level:0, is_active:1, time_left:10, time_left_in_level:0, come_time:32, needed_time:10
+time_left:1, next_come_time:8
+Process 7 run 1 time slices
+pid:7, level:1, is_active:1, time_left:9, time_left_in_level:0, come_time:32, needed_time:10
+Queue 0:
+Queue 1: 7
+Queue 2: 6
+Queue 3: 0 2 4 5
+
+------------------------------------------------------------------------------------------
+now time:33
+next process info:
+pid:7, level:1, is_active:1, time_left:9, time_left_in_level:0, come_time:32, needed_time:10
+time_left:2, next_come_time:7
+Process 7 run 2 time slices
+pid:7, level:2, is_active:1, time_left:7, time_left_in_level:0, come_time:32, needed_time:10
+Queue 0:
+Queue 1:
+Queue 2: 6 7
+Queue 3: 0 2 4 5
+
+------------------------------------------------------------------------------------------
+now time:35
+next process info:
+pid:6, level:2, is_active:1, time_left:7, time_left_in_level:1, come_time:30, needed_time:9
+time_left:1, next_come_time:5
+Process 6 run 1 time slices
+pid:6, level:3, is_active:1, time_left:6, time_left_in_level:0, come_time:30, needed_time:9
+Queue 0:
+Queue 1:
+Queue 2: 7
+Queue 3: 0 2 4 5 6
+
+------------------------------------------------------------------------------------------
+now time:36
+next process info:
+pid:7, level:2, is_active:1, time_left:7, time_left_in_level:0, come_time:32, needed_time:10
+time_left:4, next_come_time:4
+Process 7 run 4 time slices
+pid:7, level:3, is_active:1, time_left:3, time_left_in_level:0, come_time:32, needed_time:10
+Process 8 come
+Queue 0: 8
+Queue 1:
+Queue 2:
+Queue 3: 0 2 4 5 6 7
+
+------------------------------------------------------------------------------------------
+now time:40
+next process info:
+pid:8, level:0, is_active:1, time_left:11, time_left_in_level:0, come_time:40, needed_time:11
+time_left:1, next_come_time:10
+Process 8 run 1 time slices
+pid:8, level:1, is_active:1, time_left:10, time_left_in_level:0, come_time:40, needed_time:11
+Queue 0:
+Queue 1: 8
+Queue 2:
+Queue 3: 0 2 4 5 6 7
+
+------------------------------------------------------------------------------------------
+now time:41
+next process info:
+pid:8, level:1, is_active:1, time_left:10, time_left_in_level:0, come_time:40, needed_time:11
+time_left:2, next_come_time:9
+Process 8 run 2 time slices
+pid:8, level:2, is_active:1, time_left:8, time_left_in_level:0, come_time:40, needed_time:11
+Queue 0:
+Queue 1:
+Queue 2: 8
+Queue 3: 0 2 4 5 6 7
+
+------------------------------------------------------------------------------------------
+now time:43
+next process info:
+pid:8, level:2, is_active:1, time_left:8, time_left_in_level:0, come_time:40, needed_time:11
+time_left:4, next_come_time:7
+Process 8 run 4 time slices
+pid:8, level:3, is_active:1, time_left:4, time_left_in_level:0, come_time:40, needed_time:11
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3: 0 2 4 5 6 7 8
+
+------------------------------------------------------------------------------------------
+now time:47
+next process info:
+pid:0, level:3, is_active:1, time_left:1, time_left_in_level:0, come_time:0, needed_time:8
+time_left:1, next_come_time:3
+Process 0 run 1 time slices
+Process 0 finished
+pid:0, level:3, is_active:0, time_left:0, time_left_in_level:7, come_time:0, needed_time:8
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3: 2 4 5 6 7 8
+
+------------------------------------------------------------------------------------------
+now time:48
+next process info:
+pid:2, level:3, is_active:1, time_left:10, time_left_in_level:0, come_time:13, needed_time:17
+time_left:8, next_come_time:2
+Process 2 run 2 time slices
+Process 9 come
+pid:2, level:3, is_active:1, time_left:8, time_left_in_level:6, come_time:13, needed_time:17
+Queue 0: 9
+Queue 1:
+Queue 2:
+Queue 3: 4 5 6 7 8 2
+
+------------------------------------------------------------------------------------------
+now time:50
+next process info:
+pid:9, level:0, is_active:1, time_left:12, time_left_in_level:0, come_time:50, needed_time:12
+time_left:1, next_come_time:99949
+Process 9 run 1 time slices
+pid:9, level:1, is_active:1, time_left:11, time_left_in_level:0, come_time:50, needed_time:12
+Queue 0:
+Queue 1: 9
+Queue 2:
+Queue 3: 4 5 6 7 8 2
+
+------------------------------------------------------------------------------------------
+now time:51
+next process info:
+pid:9, level:1, is_active:1, time_left:11, time_left_in_level:0, come_time:50, needed_time:12
+time_left:2, next_come_time:99948
+Process 9 run 2 time slices
+pid:9, level:2, is_active:1, time_left:9, time_left_in_level:0, come_time:50, needed_time:12
+Queue 0:
+Queue 1:
+Queue 2: 9
+Queue 3: 4 5 6 7 8 2
+
+------------------------------------------------------------------------------------------
+now time:53
+next process info:
+pid:9, level:2, is_active:1, time_left:9, time_left_in_level:0, come_time:50, needed_time:12
+time_left:4, next_come_time:99946
+Process 9 run 4 time slices
+pid:9, level:3, is_active:1, time_left:5, time_left_in_level:0, come_time:50, needed_time:12
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3: 4 5 6 7 8 2 9
+
+------------------------------------------------------------------------------------------
+now time:57
+next process info:
+pid:4, level:3, is_active:1, time_left:1, time_left_in_level:0, come_time:21, needed_time:4
+time_left:1, next_come_time:99942
+Process 4 run 1 time slices
+Process 4 finished
+pid:4, level:3, is_active:0, time_left:0, time_left_in_level:7, come_time:21, needed_time:4
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3: 5 6 7 8 2 9
+
+------------------------------------------------------------------------------------------
+now time:58
+next process info:
+pid:5, level:3, is_active:1, time_left:1, time_left_in_level:3, come_time:25, needed_time:5
+time_left:1, next_come_time:99941
+Process 5 run 1 time slices
+Process 5 finished
+pid:5, level:3, is_active:0, time_left:0, time_left_in_level:2, come_time:25, needed_time:5
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3: 6 7 8 2 9
+
+------------------------------------------------------------------------------------------
+now time:59
+next process info:
+pid:6, level:3, is_active:1, time_left:6, time_left_in_level:0, come_time:30, needed_time:9
+time_left:6, next_come_time:99940
+Process 6 run 6 time slices
+Process 6 finished
+pid:6, level:3, is_active:0, time_left:0, time_left_in_level:2, come_time:30, needed_time:9
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3: 7 8 2 9
+
+------------------------------------------------------------------------------------------
+now time:65
+next process info:
+pid:7, level:3, is_active:1, time_left:3, time_left_in_level:0, come_time:32, needed_time:10
+time_left:3, next_come_time:99934
+Process 7 run 3 time slices
+Process 7 finished
+pid:7, level:3, is_active:0, time_left:0, time_left_in_level:5, come_time:32, needed_time:10
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3: 8 2 9
+
+------------------------------------------------------------------------------------------
+now time:68
+next process info:
+pid:8, level:3, is_active:1, time_left:4, time_left_in_level:0, come_time:40, needed_time:11
+time_left:4, next_come_time:99931
+now time:72
+next process info:
+pid:2, level:3, is_active:1, time_left:8, time_left_in_level:6, come_time:13, needed_time:17
+time_left:6, next_come_time:99927
+Process 2 run 6 time slices
+pid:2, level:3, is_active:1, time_left:2, time_left_in_level:0, come_time:13, needed_time:17
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3: 9 2
+
+------------------------------------------------------------------------------------------
+now time:78
+next process info:
+pid:9, level:3, is_active:1, time_left:5, time_left_in_level:0, come_time:50, needed_time:12
+time_left:5, next_come_time:99921
+Process 9 run 5 time slices
+Process 9 finished
+pid:9, level:3, is_active:0, time_left:0, time_left_in_level:3, come_time:50, needed_time:12
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3: 2
+
+------------------------------------------------------------------------------------------
+now time:83
+next process info:
+pid:2, level:3, is_active:1, time_left:2, time_left_in_level:0, come_time:13, needed_time:17
+time_left:2, next_come_time:99916
+Process 2 run 2 time slices
+Process 2 finished
+pid:2, level:3, is_active:0, time_left:0, time_left_in_level:6, come_time:13, needed_time:17
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3:
+
+------------------------------------------------------------------------------------------
+now time:85
+No process in queue and no process will come!!!
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3:
+
+------------------------------------------------------------------------------------------
+now time:85
+No process in queue and no process will come!!!
+Queue 0:
+Queue 1:
+Queue 2:
+Queue 3:
